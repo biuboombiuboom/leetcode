@@ -18,7 +18,7 @@ func main() {
 	// result := problem1.TwoSum(nums, target)
 
 	// 7
-	input := -12534
+	input := -123
 	result := problem7.Reverse(input)
 	fmt.Println(result)
 }
