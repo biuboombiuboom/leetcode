@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/problem7"
+	"github.com/biuboombiuboom/leetcode/problem9"
 )
 
 func main() {
@@ -18,7 +18,11 @@ func main() {
 	// result := problem1.TwoSum(nums, target)
 
 	// 7
-	input := -123
-	result := problem7.Reverse(input)
+	// input := -123
+	// result := problem7.Reverse(input)
+
+	input := 121
+	result := problem9.IsPalindrome(input)
 	fmt.Println(result)
+
 }
