@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/problem9"
+	"github.com/biuboombiuboom/leetcode/problem13"
 )
 
 func main() {
@@ -21,8 +21,11 @@ func main() {
 	// input := -123
 	// result := problem7.Reverse(input)
 
-	input := 121
-	result := problem9.IsPalindrome(input)
+	// input := 121
+	// result := problem9.IsPalindrome(input)
+
+	input := "MCMXCIV"
+	result := problem13.RomanToInt(input)
 	fmt.Println(result)
 
 }
