@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/problem13"
+	"github.com/biuboombiuboom/leetcode/problem14"
 )
 
 func main() {
@@ -24,8 +24,11 @@ func main() {
 	// input := 121
 	// result := problem9.IsPalindrome(input)
 
-	input := "MCMXCIV"
-	result := problem13.RomanToInt(input)
+	// input := "MCMXCIV"
+	// result := problem13.RomanToInt(input)
+
+	input := []string{"aaa", "aa", "aaa"}
+	result := problem14.LongestCommonPrefix(input)
 	fmt.Println(result)
 
 }
