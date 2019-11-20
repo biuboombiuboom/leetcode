@@ -32,7 +32,7 @@ func init() {
 // }
 
 //IsValid1 s
-func IsValid1(s string) bool {
+func IsValid(s string) bool {
 	if s == "" {
 		return true
 	}

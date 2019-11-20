@@ -1,10 +1,8 @@
 package main
 
-import (
-	"fmt"
+import "github.com/biuboombiuboom/leetcode/problem21"
 
-	"github.com/biuboombiuboom/leetcode/problem20"
-)
+import "fmt"
 
 func main() {
 
@@ -30,9 +28,40 @@ func main() {
 	// input := []string{"aaa", "aa", "aaa"}
 	// result := problem14.LongestCommonPrefix(input)
 
-	input := "()"
-	result := problem20.IsValid(input)
+	// input := "()"
+	// result := problem20.IsValid(input)
 
-	fmt.Println(result)
+	l1 := &problem21.ListNode{
+		Val: 1,
+		Next: &problem21.ListNode{
+			Val: 2,
+			Next: &problem21.ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+
+	l2 := &problem21.ListNode{
+		Val: 1,
+		Next: &problem21.ListNode{
+			Val: 3,
+			Next: &problem21.ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+
+	l1 = problem21.MergeTwoLists(l1, l2)
+	for {
+		fmt.Printf("%d,", l1.Val)
+		l1 = l1.Next
+		if l1 == nil {
+			break
+		}
+	}
+
+	// fmt.Println(result)
 
 }
