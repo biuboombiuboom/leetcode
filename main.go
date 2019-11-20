@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/problem14"
+	"github.com/biuboombiuboom/leetcode/problem20"
 )
 
 func main() {
@@ -27,8 +27,12 @@ func main() {
 	// input := "MCMXCIV"
 	// result := problem13.RomanToInt(input)
 
-	input := []string{"aaa", "aa", "aaa"}
-	result := problem14.LongestCommonPrefix(input)
+	// input := []string{"aaa", "aa", "aaa"}
+	// result := problem14.LongestCommonPrefix(input)
+
+	input := "()"
+	result := problem20.IsValid(input)
+
 	fmt.Println(result)
 
 }
