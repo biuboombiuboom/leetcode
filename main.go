@@ -1,8 +1,10 @@
 package main
 
-import "github.com/biuboombiuboom/leetcode/problem26"
+import (
+	"fmt"
 
-import "fmt"
+	"github.com/biuboombiuboom/leetcode/problem27"
+)
 
 func main() {
 
@@ -62,8 +64,8 @@ func main() {
 	// 	}
 	// }
 
-	input := []int{1, 1, 2, 2, 2, 3, 4, 5}
-	result := problem26.RemoveDuplicates(input)
+	input := []int{0, 1, 2, 2, 3, 0, 4, 2}
+	result := problem27.RemoveElement(input, 2)
 	for i := 0; i < result; i++ {
 		fmt.Print(input[i])
 	}
