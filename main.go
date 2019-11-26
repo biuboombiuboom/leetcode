@@ -1,10 +1,8 @@
 package main
 
-import (
-	"fmt"
+import "github.com/biuboombiuboom/leetcode/problem2"
 
-	"github.com/biuboombiuboom/leetcode/problem27"
-)
+import "fmt"
 
 func main() {
 
@@ -64,10 +62,39 @@ func main() {
 	// 	}
 	// }
 
-	input := []int{0, 1, 2, 2, 3, 0, 4, 2}
-	result := problem27.RemoveElement(input, 2)
-	for i := 0; i < result; i++ {
-		fmt.Print(input[i])
+	// input := []int{0, 1, 2, 2, 3, 0, 4, 2}
+	// result := problem27.RemoveElement(input, 2)
+	// for i := 0; i < result; i++ {
+	// 	fmt.Print(input[i])
+	// }
+
+	l1 := &problem2.ListNode{
+		Val: 2,
+		Next: &problem2.ListNode{
+			Val:  4,
+			Next: nil,
+			// Next: &problem2.ListNode{
+			// 	Val:  3,
+			// 	Next: nil,
+			// },
+		},
+	}
+
+	l2 := &problem2.ListNode{
+		Val: 5,
+		Next: &problem2.ListNode{
+			Val: 6,
+			Next: &problem2.ListNode{
+				Val:  4,
+				Next: nil,
+			},
+		},
+	}
+	result := problem2.AddTwoNumbers(l1, l2)
+
+	for result != nil {
+		fmt.Println(result.Val)
+		result = result.Next
 	}
 	// fmt.Println(result)
 
