@@ -1,6 +1,6 @@
 package main
 
-import "github.com/biuboombiuboom/leetcode/problem2"
+import "github.com/biuboombiuboom/leetcode/problem28"
 
 import "fmt"
 
@@ -68,34 +68,36 @@ func main() {
 	// 	fmt.Print(input[i])
 	// }
 
-	l1 := &problem2.ListNode{
-		Val: 2,
-		Next: &problem2.ListNode{
-			Val:  4,
-			Next: nil,
-			// Next: &problem2.ListNode{
-			// 	Val:  3,
-			// 	Next: nil,
-			// },
-		},
-	}
+	// l1 := &problem2.ListNode{
+	// 	Val: 2,
+	// 	Next: &problem2.ListNode{
+	// 		Val:  4,
+	// 		Next: nil,
+	// 		// Next: &problem2.ListNode{
+	// 		// 	Val:  3,
+	// 		// 	Next: nil,
+	// 		// },
+	// 	},
+	// }
 
-	l2 := &problem2.ListNode{
-		Val: 5,
-		Next: &problem2.ListNode{
-			Val: 6,
-			Next: &problem2.ListNode{
-				Val:  4,
-				Next: nil,
-			},
-		},
-	}
-	result := problem2.AddTwoNumbers(l1, l2)
+	// l2 := &problem2.ListNode{
+	// 	Val: 5,
+	// 	Next: &problem2.ListNode{
+	// 		Val: 6,
+	// 		Next: &problem2.ListNode{
+	// 			Val:  4,
+	// 			Next: nil,
+	// 		},
+	// 	},
+	// }
+	// result := problem2.AddTwoNumbers(l1, l2)
 
-	for result != nil {
-		fmt.Println(result.Val)
-		result = result.Next
-	}
+	// for result != nil {
+	// 	fmt.Println(result.Val)
+	// 	result = result.Next
+	// }
 	// fmt.Println(result)
+
+	fmt.Println(problem28.StrStr("abcaabababaa", "abab"))
 
 }
