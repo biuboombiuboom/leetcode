@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-import "github.com/biuboombiuboom/leetcode/problem3"
+	"github.com/biuboombiuboom/leetcode/problem35"
+)
 
 func main() {
 
@@ -99,5 +101,6 @@ func main() {
 	// fmt.Println(result)
 
 	// fmt.Println(problem28.StrStr("abcaabababaa", "abab"))
-	fmt.Println(problem3.LengthOfLongestSubstring("acdfggseercghacthgfhfg"))
+	// fmt.Println(problem3.LengthOfLongestSubstring("acdfggseercghacthgfhfg"))
+	fmt.Println(problem35.SearchInsert([]int{1, 2, 3, 4, 5, 6, 10, 15, 22}, 15))
 }
