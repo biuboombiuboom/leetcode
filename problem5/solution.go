@@ -1,14 +1,15 @@
 package problem5
 
-//LongestPalindrome s
+//LongestPalindrome 暴力破解
 func LongestPalindrome(s string) string {
 	if len(s) < 2 {
 		return s
 	}
-	result := ""
+	result := s[0:1] 2
 	for i := 0; i < len(s); i++ {
 		for j := i + 1; j < len(s); j++ {
 			s1 := s[i : j+1]
+
 			flag := true
 			left := len(s1)/2 - 1
 			right := len(s1)/2 + 1
