@@ -7,7 +7,7 @@ func LongestPalindrome(s string) string {
 	}
 	result := ""
 	for i := 0; i < len(s); i++ {
-		for j := len(s); j > i; j++ {
+		for j := i + 1; j < len(s); j++ {
 			s1 := s[i : j+1]
 			flag := true
 			left := len(s1)/2 - 1
