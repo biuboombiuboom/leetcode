@@ -1,5 +1,6 @@
 package problem66
 
+//PlusOne p
 func PlusOne(digits []int) []int {
 	l := len(digits)
 	for i := l - 1; i > -1; i-- {
@@ -16,6 +17,7 @@ func PlusOne(digits []int) []int {
 
 }
 
+//PlusOne1 p
 func PlusOne1(digits []int) []int {
 	l := len(digits)
 
