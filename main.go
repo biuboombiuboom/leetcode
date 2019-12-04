@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/problem66"
+	"github.com/biuboombiuboom/leetcode/problem67"
 )
 
 func main() {
@@ -103,7 +103,6 @@ func main() {
 	// fmt.Println(problem28.StrStr("abcaabababaa", "abab"))
 	// fmt.Println(problem3.LengthOfLongestSubstring("acdfggseercghacthgfhfg"))
 	// fmt.Println(problem35.SearchInsert1([]int{1, 2, 3, 4, 5, 6, 10, 15, 22}, 15))
-	input := []int{9}
-	fmt.Println(problem66.PlusOne(input))
+	fmt.Println(problem67.AddBinary("1111", "1111"))
 
 }
