@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 
-	"github.com/biuboombiuboom/leetcode/easy/algorithm"
+	nornal "github.com/biuboombiuboom/leetcode/nornal/algorithm"
 )
 
 func main() {
+
+	fmt.Println(nornal.Convert("LEETCODEISHIRING", 3))
 
 	// 717
 	// inputs := []int{1, 1, 1, 0}
@@ -103,5 +105,4 @@ func main() {
 	// fmt.Println(problem28.StrStr("abcaabababaa", "abab"))
 	// fmt.Println(problem3.LengthOfLongestSubstring("acdfggseercghacthgfhfg"))
 	// fmt.Println(problem35.SearchInsert1([]int{1, 2, 3, 4, 5, 6, 10, 15, 22}, 15))
-	fmt.Println(algorithm.ClimbStairs(1))
 }

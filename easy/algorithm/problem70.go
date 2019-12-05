@@ -1,5 +1,6 @@
 package algorithm
 
+//ClimbStairs c
 func ClimbStairs(n int) int {
 	dp := make([]int, 2)
 	count := 0
