@@ -34,9 +34,9 @@ func main() {
 	// input := "()"
 	// result := problem20.IsValid(input)
 
-	input2 := []int{3, 1, 2, 1}
-	input1 := []int{1, 1, 2, 1}
-	fmt.Print(easy.Intersect(input1, input2))
+	// input2 := []int{3, 1, 2, 1}
+	// input1 := []int{1, 1, 2, 1}
+	fmt.Print(easy.CommonChars([]string{"cook"}))
 	// easy.Merge(input1, 3, input2, 3)
 	// fmt.Printf("%v", input1)
 	// l := &easy.ListNode{
