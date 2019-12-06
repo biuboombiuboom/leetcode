@@ -4,11 +4,11 @@ import (
 	"fmt"
 
 	nornal "github.com/biuboombiuboom/leetcode/nornal/algorithm"
+
+	easy "github.com/biuboombiuboom/leetcode/easy/algorithm"
 )
 
 func main() {
-
-	fmt.Println(nornal.Convert("LEETCODEISHIRING", 3))
 
 	// 717
 	// inputs := []int{1, 1, 1, 0}
@@ -35,16 +35,25 @@ func main() {
 	// input := "()"
 	// result := problem20.IsValid(input)
 
-	// l1 := &problem21.ListNode{
-	// 	Val: 1,
-	// 	Next: &problem21.ListNode{
-	// 		Val: 2,
-	// 		Next: &problem21.ListNode{
-	// 			Val:  4,
-	// 			Next: nil,
-	// 		},
-	// 	},
-	// }
+	l := &easy.ListNode{
+		Val: 1,
+		Next: &easy.ListNode{
+			Val: 2,
+			Next: &easy.ListNode{
+				Val:  2,
+				Next: nil,
+			},
+		},
+	}
+	l = easy.DeleteDuplicates(l)
+	for l != nil {
+		fmt.Printf("%d->", l.Val)
+		l = l.Next
+	}
+
+	return
+
+	fmt.Println(nornal.Convert("LEETCODEISHIRING", 3))
 
 	// l2 := &problem21.ListNode{
 	// 	Val: 1,
