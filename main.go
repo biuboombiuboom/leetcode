@@ -35,21 +35,25 @@ func main() {
 	// input := "()"
 	// result := problem20.IsValid(input)
 
-	l := &easy.ListNode{
-		Val: 1,
-		Next: &easy.ListNode{
-			Val: 2,
-			Next: &easy.ListNode{
-				Val:  2,
-				Next: nil,
-			},
-		},
-	}
-	l = easy.DeleteDuplicates(l)
-	for l != nil {
-		fmt.Printf("%d->", l.Val)
-		l = l.Next
-	}
+	input1 := []int{4, 5, 6, 0, 0, 0}
+	input2 := []int{1, 2, 3}
+	easy.Merge(input1, 3, input2, 3)
+	fmt.Printf("%v", input1)
+	// l := &easy.ListNode{
+	// 	Val: 1,
+	// 	Next: &easy.ListNode{
+	// 		Val: 2,
+	// 		Next: &easy.ListNode{
+	// 			Val:  2,
+	// 			Next: nil,
+	// 		},
+	// 	},
+	// }
+	// l = easy.DeleteDuplicates(l)
+	// for l != nil {
+	// 	fmt.Printf("%d->", l.Val)
+	// 	l = l.Next
+	// }
 
 	return
 

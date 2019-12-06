@@ -1,5 +1,6 @@
 package algorithm
 
+//DeleteDuplicates d
 func DeleteDuplicates(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
