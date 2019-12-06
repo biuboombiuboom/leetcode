@@ -3,9 +3,8 @@ package main
 import (
 	"fmt"
 
-	nornal "github.com/biuboombiuboom/leetcode/nornal/algorithm"
-
 	easy "github.com/biuboombiuboom/leetcode/easy/algorithm"
+	nornal "github.com/biuboombiuboom/leetcode/nornal/algorithm"
 )
 
 func main() {
@@ -35,10 +34,11 @@ func main() {
 	// input := "()"
 	// result := problem20.IsValid(input)
 
-	input1 := []int{4, 5, 6, 0, 0, 0}
-	input2 := []int{1, 2, 3}
-	easy.Merge(input1, 3, input2, 3)
-	fmt.Printf("%v", input1)
+	input2 := []int{3, 1, 2, 1}
+	input1 := []int{1, 1, 2, 1}
+	fmt.Print(easy.Intersect(input1, input2))
+	// easy.Merge(input1, 3, input2, 3)
+	// fmt.Printf("%v", input1)
 	// l := &easy.ListNode{
 	// 	Val: 1,
 	// 	Next: &easy.ListNode{
