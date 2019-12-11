@@ -7,7 +7,37 @@ import (
 )
 
 func main() {
-
+	// root := &tree.BTreeNode{
+	// 	Data: 1,
+	// 	Left: &tree.BTreeNode{
+	// 		Data: 2,
+	// 		Left: &tree.BTreeNode{
+	// 			Data:  3,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 		Right: &tree.BTreeNode{
+	// 			Data:  4,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 	},
+	// 	Right: &tree.BTreeNode{
+	// 		Data: 5,
+	// 		Left: &tree.BTreeNode{
+	// 			Data:  6,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 		Right: &tree.BTreeNode{
+	// 			Data:  7,
+	// 			Left:  nil,
+	// 			Right: nil,
+	// 		},
+	// 	},
+	// }
+	// tree.Print(root)
+	// return
 	// 717
 	// inputs := []int{1, 1, 1, 0}
 	// fmt.Println(strconv.FormatBool(problem717.IsOneBitCharacter(inputs)))
@@ -35,9 +65,11 @@ func main() {
 
 	// input1 := []int{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19, 18}
 	// input2 := []int{2, 1, 4, 3, 9, 6}
-	input1 := [][]int{[]int{1, 3}, []int{2, 6}, []int{8, 10}, []int{15, 18}}
+	// input1 := [][]int{[]int{1, 3}, []int{2, 6}, []int{8, 10}, []int{15, 18}}
 	// input2 := [][]int{[]int{1, 6}, []int{8, 10}, []int{15, 18}}
-	fmt.Println(nornal.Merge(input1))
+	input := []int{2, 0, 1}
+	nornal.SortColors(input)
+	fmt.Println(input)
 	// easy.Merge(input1, 3, input2, 3)
 	// fmt.Printf("%v", input1)
 	// l := &easy.ListNode{
