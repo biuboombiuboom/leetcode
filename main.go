@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	nornal "github.com/biuboombiuboom/leetcode/nornal/algorithm"
+	nTypes "github.com/biuboombiuboom/leetcode/nornal/types"
 )
 
 func main() {
@@ -67,9 +68,25 @@ func main() {
 	// input2 := []int{2, 1, 4, 3, 9, 6}
 	// input1 := [][]int{[]int{1, 3}, []int{2, 6}, []int{8, 10}, []int{15, 18}}
 	// input2 := [][]int{[]int{1, 6}, []int{8, 10}, []int{15, 18}}
-	input := []int{2, 0, 1}
-	nornal.SortColors(input)
-	fmt.Println(input)
+	// input := []int{2, 0, 1}
+
+	l := &nTypes.ListNode{
+		Val: 2,
+		Next: &nTypes.ListNode{
+			Val: 4,
+			Next: &nTypes.ListNode{
+				Val:  1,
+				Next: nil,
+			},
+		},
+	}
+	l = nornal.InsertionSortList(l)
+	println(l.Val)
+	next := l.Next
+	for next != nil {
+		fmt.Println(next.Val)
+		next = next.Next
+	}
 	// easy.Merge(input1, 3, input2, 3)
 	// fmt.Printf("%v", input1)
 	// l := &easy.ListNode{
