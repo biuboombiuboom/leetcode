@@ -75,12 +75,18 @@ func main() {
 		Next: &nTypes.ListNode{
 			Val: 4,
 			Next: &nTypes.ListNode{
-				Val:  1,
-				Next: nil,
+				Val:  -2,
+				Next: &nTypes.ListNode{
+					Val: 9,
+					Next: &nTypes.ListNode{
+						Val:  -5,
+						Next: nil,
+					},
+				},
 			},
 		},
 	}
-	l = nornal.InsertionSortList(l)
+	l = nornal.SortList(l)
 	println(l.Val)
 	next := l.Next
 	for next != nil {

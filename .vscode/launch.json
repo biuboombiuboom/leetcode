@@ -9,7 +9,7 @@
       "type": "go",
       "request": "launch",
       "mode": "debug",
-      "program": "/home/youcx/workspace/golang/src/github.com/biuboombiuboom/leetcode/main.go",
+      "program": "${workspaceFolder}/main.go",
       "env": {},
       "args": []
     }
