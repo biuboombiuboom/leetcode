@@ -5,6 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Launch-Hard",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}/hard/main.go",
+      "env": {},
+      "args": []
+    },
+    {
       "name": "Launch",
       "type": "go",
       "request": "launch",
