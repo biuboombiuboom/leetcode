@@ -1,15 +1,13 @@
 package algorithm
 
-import "github.com/biuboombiuboom/leetcode/nornal/types"
-
 //SortList s
-func SortList(head *types.ListNode) *types.ListNode {
+func SortList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	var left, right *types.ListNode
+	var left, right *ListNode
 	for step := 1; ; step += step {
-		begin := &types.ListNode{}
+		begin := &ListNode{}
 		pre := begin
 		cCount := 0
 		for head != nil {
@@ -32,26 +30,8 @@ func SortList(head *types.ListNode) *types.ListNode {
 
 }
 
-//cut 切断链表前n个元素 返回后部分的表头
-func cut(head *types.ListNode, n int) *types.ListNode {
-	if n == 0 || head == nil {
-		return nil
-	}
-	pre := head
-	for n > 1 && pre != nil {
-		pre = pre.Next
-		n--
-	}
-	if pre == nil {
-		return nil
-	}
-	next := pre.Next
-	pre.Next = nil
-	return next
-}
-
-func merge(left *types.ListNode, right *types.ListNode) *types.ListNode {
-	begin := &types.ListNode{}
+func merge(left *ListNode, right *ListNode) *ListNode {
+	begin := &ListNode{}
 	pre := begin
 	for left != nil && right != nil {
 		if left.Val < right.Val {
@@ -72,7 +52,7 @@ func merge(left *types.ListNode, right *types.ListNode) *types.ListNode {
 }
 
 //SortList1 s
-func SortList1(head *types.ListNode) *types.ListNode {
+func SortList1(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -87,7 +67,7 @@ func SortList1(head *types.ListNode) *types.ListNode {
 
 	slow.Next = nil
 	left, right := SortList(head), SortList(mid)
-	pre := &types.ListNode{}
+	pre := &ListNode{}
 	begin := pre
 	for left != nil && right != nil {
 		if left.Val < right.Val {
