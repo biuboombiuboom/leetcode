@@ -7,100 +7,23 @@ import (
 )
 
 func main() {
-	n1 := &algorithm.ListNode{
-		Val: -6,
-		Next: &algorithm.ListNode{
-			Val: -3,
-			Next: &algorithm.ListNode{
-				Val: -1,
-				Next: &algorithm.ListNode{
-					Val: 1,
-					Next: &algorithm.ListNode{
-						Val: 2,
-						Next: &algorithm.ListNode{
-							Val: 2,
-							Next: &algorithm.ListNode{
-								Val:  2,
-								Next: nil,
-							},
-						},
-					},
-				},
-			},
-		},
+	node := biuldListNode([]int{1, 2, 3, 4, 5})
+	node = algorithm.ReverseKGroup(node, 2)
+	for node != nil {
+		fmt.Printf("%d,", node.Val)
+		node = node.Next
 	}
-	n2 := &algorithm.ListNode{
-		Val: -10,
-		Next: &algorithm.ListNode{
-			Val: -8,
-			Next: &algorithm.ListNode{
-				Val: -6,
-				Next: &algorithm.ListNode{
-					Val: -2,
-					Next: &algorithm.ListNode{
-						Val:  4,
-						Next: nil,
-					},
-				},
-			},
-		},
-	}
-	n3 := &algorithm.ListNode{
-		Val: -2,
-	}
-	n4 := &algorithm.ListNode{
-		Val: -8,
-		Next: &algorithm.ListNode{
-			Val: -4,
-			Next: &algorithm.ListNode{
-				Val: -3,
-				Next: &algorithm.ListNode{
-					Val: -3,
-					Next: &algorithm.ListNode{
-						Val: -2,
-						Next: &algorithm.ListNode{
-							Val: -1,
-							Next: &algorithm.ListNode{
-								Val: 1,
-								Next: &algorithm.ListNode{
-									Val: 2,
-									Next: &algorithm.ListNode{
-										Val:  3,
-										Next: nil,
-									},
-								},
-							},
-						},
-					},
-				},
-			},
-		},
-	}
-	n5 := &algorithm.ListNode{
-		Val: -8,
-		Next: &algorithm.ListNode{
-			Val: -6,
-			Next: &algorithm.ListNode{
-				Val: -5,
-				Next: &algorithm.ListNode{
-					Val: -4,
-					Next: &algorithm.ListNode{
-						Val: -2,
-						Next: &algorithm.ListNode{
-							Val: -2,
-							Next: &algorithm.ListNode{
-								Val: 2,
-								Next: &algorithm.ListNode{
-									Val: 4,
-								},
-							},
-						},
-					},
-				},
-			},
-		},
-	}
-
-	algorithm.MergeKLists([]*algorithm.ListNode{n1, n2, n3, n4, n5})
 	fmt.Print("")
+}
+
+func biuldListNode(nums []int) *algorithm.ListNode {
+	begin := &algorithm.ListNode{}
+	pre := begin
+	for i := 0; i < len(nums); i++ {
+		pre.Next = &algorithm.ListNode{
+			Val: nums[i],
+		}
+		pre = pre.Next
+	}
+	return begin.Next
 }
