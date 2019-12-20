@@ -9,30 +9,35 @@ import (
 
 func main() {
 
-	// n5 := &nornal.ListNode{
-	// 	Val: 5,
-	// }
-	// n4 := &nornal.ListNode{
-	// 	Val:  4,
-	// 	Next: n5,
-	// }
-	// n3 := &nornal.ListNode{
-	// 	Val:  3,
-	// 	Next: n4,
-	// }
+	n5 := &nornal.ListNode{
+		Val: 5,
+	}
+	n4 := &nornal.ListNode{
+		Val:  4,
+		Next: n5,
+	}
+	n3 := &nornal.ListNode{
+		Val:  3,
+		Next: n4,
+	}
 	n2 := &nornal.ListNode{
 		Val:  2,
-		Next: nil,
+		Next: n3,
 	}
 	head := &nornal.ListNode{
 		Val:  1,
 		Next: n2,
 	}
 
-	fmt.Println(nornal.RemoveNthFromEnd(head, 2).Val)
-
+	l := nornal.SwapPairs(head)
+	println(l.Val)
+	n := l.Next
+	for n != nil {
+		fmt.Println(n.Val)
+		n = n.Next
+	}
 	return
-	l := &nTypes.ListNode{
+	l1 := &nTypes.ListNode{
 		Val: 2,
 		Next: &nTypes.ListNode{
 			Val:  4,
@@ -40,8 +45,8 @@ func main() {
 		},
 	}
 
-	println(l.Val)
-	next := l.Next
+	println(l1.Val)
+	next := l1.Next
 	for next != nil {
 		fmt.Println(next.Val)
 		next = next.Next
