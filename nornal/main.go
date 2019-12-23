@@ -8,10 +8,11 @@ import (
 
 func main() {
 
-	head := biuldListNode([]int{1, 2, 2, 2, 3, 4, 5, 6})
+	head := biuldListNode([]int{1, 1, 2, 3, 3})
 	l := algorithm.DeleteDuplicates(head)
 	for l != nil {
 		fmt.Printf("%d,", l.Val)
+		l = l.Next
 	}
 }
 

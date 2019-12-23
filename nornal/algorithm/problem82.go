@@ -5,26 +5,34 @@ func DeleteDuplicates(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	nums := make(map[int]int)
-
-	for head != nil {
-		if n, ok := nums[head.Val]; ok {
-			n++
-			nums[head.Val] = n
-		} else {
-			nums[head.Val] = 1
-		}
-		head = head.Next
+	begin := &ListNode{
+		Next: head,
 	}
-	begin := &ListNode{}
 	pre := begin
-	for k, v := range nums {
-		if v == 1 {
-			pre.Next = &ListNode{
-				Val: k,
+	curr := pre.Next
+	next := curr.Next
+	//
+	delFlag := false
+	for curr != nil && next != nil {
+		if curr.Val == next.Val {
+			delFlag = true
+			next = next.Next
+			curr.Next = next
+		} else {
+			if delFlag {
+				delFlag = !delFlag
+				curr = next
+				pre.Next = curr
+				next = curr.Next
+			} else {
+				pre = curr
+				curr = next
+				next = next.Next
 			}
-			pre = pre.Next
 		}
+	}
+	if delFlag {
+		pre.Next = next
 	}
 	return begin.Next
 }
