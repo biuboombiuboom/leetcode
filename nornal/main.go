@@ -8,8 +8,8 @@ import (
 
 func main() {
 
-	head := biuldListNode([]int{1, 4, 3, 2, 5, 2})
-	l := algorithm.Partition(head, 3)
+	head := biuldListNode([]int{1, 2, 3, 4, 5})
+	l := algorithm.ReverseBetween(head, 2, 5)
 	for l != nil {
 		fmt.Printf("%d,", l.Val)
 		l = l.Next
