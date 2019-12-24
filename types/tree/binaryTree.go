@@ -2,10 +2,6 @@ package tree
 
 import "fmt"
 
-//BinaryTree b-tree
-type BinaryTree struct {
-}
-
 //BTreeNode node
 type BTreeNode struct {
 	Left  *BTreeNode
