@@ -6,9 +6,9 @@ import (
 
 func main() {
 
-	head := biuldListNode([]int{-10, -3, 0, 5, 9})
-	l := algorithm.SortedListToBST(head)
-	algorithm.Print(l)
+	head := buildCycleListNode([]int{3, 2, 0, -4}, 2)
+	algorithm.DetectCycle(head)
+
 }
 
 func biuldListNode(nums []int) *algorithm.ListNode {
@@ -20,5 +20,22 @@ func biuldListNode(nums []int) *algorithm.ListNode {
 		}
 		pre = pre.Next
 	}
+	return begin.Next
+}
+
+func buildCycleListNode(nums []int, pos int) *algorithm.ListNode {
+	begin := &algorithm.ListNode{}
+	pre := begin
+	var cycleBegin *algorithm.ListNode
+	for i := 0; i < len(nums); i++ {
+		pre.Next = &algorithm.ListNode{
+			Val: nums[i],
+		}
+		pre = pre.Next
+		if pos == i {
+			cycleBegin = pre
+		}
+	}
+	pre.Next = cycleBegin
 	return begin.Next
 }
