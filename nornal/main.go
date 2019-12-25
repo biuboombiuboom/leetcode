@@ -1,14 +1,24 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/biuboombiuboom/leetcode/nornal/algorithm"
 )
 
 func main() {
 
-	head := buildCycleListNode([]int{3, 2, 0, -4}, 1)
-	algorithm.DetectCycle(head)
+	head := biuldListNode([]int{1})
+	algorithm.ReorderList(head)
+	printListNode(head)
 
+}
+
+func printListNode(head *algorithm.ListNode) {
+	for head != nil {
+		fmt.Printf("%d,", head.Val)
+		head = head.Next
+	}
 }
 
 func biuldListNode(nums []int) *algorithm.ListNode {
