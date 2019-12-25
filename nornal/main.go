@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	head := buildCycleListNode([]int{3, 2, 0, -4}, 2)
+	head := buildCycleListNode([]int{3, 2, 0, -4}, 1)
 	algorithm.DetectCycle(head)
 
 }
