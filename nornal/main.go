@@ -9,10 +9,10 @@ import (
 func main() {
 
 	l1 := biuldListNode([]int{7, 2, 4, 3})
-	l2 := biuldListNode([]int{5, 6, 4})
-
-	sum := algorithm.AddTwoNumbers(l1, l2)
-	printListNode(sum)
+	// l2 := biuldListNode([]int{5, 6, 4})
+	parts := algorithm.SplitListToParts(l1, 5)
+	// sum := algorithm.AddTwoNumbers(l1, l2)
+	printListNode(parts[0])
 
 }
 
