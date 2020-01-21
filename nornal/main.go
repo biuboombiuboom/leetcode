@@ -8,9 +8,10 @@ import (
 
 func main() {
 
-	l1 := biuldListNode([]int{0, 1, 2, 3})
-	// l2 := biuldListNode([]int{5, 6, 4})
-	algorithm.NumComponents(l1, []int{0, 1, 3})
+	fmt.Println(algorithm.SimplifyPath("/a/./b/../../c/"))
+	// l1 := biuldListNode([]int{0, 1, 2, 3})
+	// // l2 := biuldListNode([]int{5, 6, 4})
+	// algorithm.NumComponents(l1, []int{0, 1, 3})
 	// sum := algorithm.AddTwoNumbers(l1, l2)
 	// printListNode(parts)
 
