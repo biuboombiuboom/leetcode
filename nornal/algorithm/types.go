@@ -8,11 +8,17 @@ type ListNode struct {
 }
 
 type Node struct {
-	Val   int
-	Pre   *Node
-	Next  *Node
-	Child *Node
+	Val    int
+	Next   *Node
+	Random *Node
 }
+
+// type Node struct {
+// 	Val   int
+// 	Pre   *Node
+// 	Next  *Node
+// 	Child *Node
+// }
 
 //cut 切断链表前n个元素 返回后部分的表头
 func cut(head *ListNode, n int) *ListNode {

@@ -1,21 +1,26 @@
 package algorithm
 
-func OddEvenList(head *ListNode) *ListNode {
-	if head == nil {
-		return nil
-	}
-	odd := head
-	even := head.Next
-	for odd != nil && even != nil {
-		swap := even.Next
-		if swap == nil {
-			break
+
+func CopyRandomList(head *Node) *Node {
+	copyMap:=make(map[*Node]*Node)
+	return doCopy(head,copyMap)
+}
+
+func doCopy(head *Node,mapNode map[*Node]*Node) *Node {
+	if mapNode[head]==nil {
+		copy := &Node{
+			Val: head.Val,
 		}
-		even.Next = swap.Next
-		swap.Next = odd.Next
-		odd.Next = swap
-		odd = odd.Next
-		even = even.Next
+		mapNode[head]=copy
+		if head.Next != nil {
+			copy.Next = doCopy(head.Next,mapNode)
+		}
+		if head.Random != nil {
+			copy.Random = doCopy(head.Random,mapNode)
+		}
+
+
 	}
-	return head
+	return mapNode[head]
+
 }
