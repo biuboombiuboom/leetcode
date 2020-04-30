@@ -48,6 +48,15 @@
       "program": "${workspaceFolder}/game/.",
       "env": {},
       "args": []
+    },
+    {
+      "name": "everyday",
+      "type": "go",
+      "request": "launch",
+      "mode": "debug",
+      "program": "${workspaceFolder}/everyday/.",
+      "env": {},
+      "args": []
     }
   ]
 }
