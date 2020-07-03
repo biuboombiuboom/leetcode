@@ -3,23 +3,21 @@ package algorithm
 func MergeKLists(lists []*ListNode) *ListNode {
 	l := len(lists)
 	if l == 1 {
-		return lists[l-1]
+		return lists[0]
 	}
 	if l == 0 {
 		return nil
 	}
+
 	iteration := 1
-
-	for iteration < l {
-
-		for i := 0; i < (l+1)/(iteration*2); i++ {
+	for iteration < l*iteration {
+		for i := 0; i < (l+1)/2; i++ {
 			i1 := i * 2
 			i2 := i*2 + 1
 			l1 := lists[i1]
 			if i2 < l {
 				l2 := lists[i2]
 				lists[i] = mergeList(l1, l2)
-				lists[i2] = nil
 			} else {
 				lists[i] = mergeList(l1, nil)
 			}

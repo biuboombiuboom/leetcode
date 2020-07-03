@@ -3,12 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	head := biuldListNode([]int{1, 2})
-	head = partition(head, 3)
-	printListNode(head)
+	//head := buildListNode([]int{1, 2})
+	l1:=buildListNode([]int{8,9,9})
+	l2:=buildListNode([]int{2})
+	l1=addTwoNumbers(l2,l1)
+
+
+	printListNode(l1)
 }
 
-func biuldListNode(nums []int) *ListNode {
+func buildListNode(nums []int) *ListNode {
 	begin := &ListNode{}
 	pre := begin
 	for i := 0; i < len(nums); i++ {

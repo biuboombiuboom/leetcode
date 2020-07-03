@@ -13,6 +13,10 @@ type Node struct {
 	Random *Node
 }
 
+type Stack struct{
+
+}
+
 // type Node struct {
 // 	Val   int
 // 	Pre   *Node
