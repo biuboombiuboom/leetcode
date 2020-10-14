@@ -13,16 +13,15 @@ type Node struct {
 	Random *Node
 }
 
-type Stack struct{
-
+type Stack struct {
 }
 
-// type Node struct {
-// 	Val   int
-// 	Pre   *Node
-// 	Next  *Node
-// 	Child *Node
-// }
+type LNode struct {
+	Val   int
+	Pre   *LNode
+	Next  *LNode
+	Child *LNode
+}
 
 //cut 切断链表前n个元素 返回后部分的表头
 func cut(head *ListNode, n int) *ListNode {

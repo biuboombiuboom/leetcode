@@ -1,6 +1,6 @@
 package algorithm
 
-func flatten(head *Node) *Node {
+func flatten(head *LNode) *LNode {
 	curr := head
 	for curr != nil && curr.Child != nil {
 		swap := curr.Next
