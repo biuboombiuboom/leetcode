@@ -7,8 +7,7 @@ import (
 )
 
 func main() {
-
-	fmt.Println(algorithm.SimplifyPath("/a/./b/../../c/"))
+	fmt.Println(algorithm.MyAtoi("9223372036854775808"))
 	// l1 := biuldListNode([]int{0, 1, 2, 3})
 	// // l2 := biuldListNode([]int{5, 6, 4})
 	// algorithm.NumComponents(l1, []int{0, 1, 3})
