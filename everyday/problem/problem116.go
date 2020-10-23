@@ -1,4 +1,4 @@
-package main
+package problem
 
 func connect(root *Node) *Node {
 	cur := root

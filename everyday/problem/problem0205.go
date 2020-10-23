@@ -1,6 +1,6 @@
-package main
+package problem
 
-func addTwoNumbers(l1 *ListNode,l2 *ListNode)*ListNode{
+func addTwoNumbers(l1 *ListNode,l2 *ListNode)*ListNode {
 	c1:=l1
 	end:=c1
 	c2:=l2

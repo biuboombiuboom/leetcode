@@ -1,4 +1,4 @@
-package main
+package problem
 
 func detectCycle(head *ListNode) *ListNode {
 	if head==nil{

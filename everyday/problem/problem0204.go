@@ -1,4 +1,4 @@
-package main
+package problem
 
 func partition(head *ListNode, x int) *ListNode {
 	if head == nil {

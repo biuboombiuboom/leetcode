@@ -1,4 +1,4 @@
-package main
+package problem
 
 func singleNumbers(nums []int) []int {
 	result:=[]int{0,0}
