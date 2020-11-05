@@ -3,6 +3,8 @@ package problem
 import "fmt"
 
 func Print() {
-
-	fmt.Printf("%v", validMountainArray([]int{1}))
+	begin := "hit"
+	end := "cog"
+	wordList := []string{"hot", "dot", "dog", "lot", "log", "cog"}
+	fmt.Printf("%v", ladderLength(begin, end, wordList))
 }
