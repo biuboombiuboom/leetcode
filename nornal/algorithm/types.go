@@ -1,7 +1,5 @@
 package algorithm
 
-import "fmt"
-
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -49,22 +47,22 @@ type TreeNode struct {
 }
 
 //Print p
-func Print(root *TreeNode) {
-	if root == nil {
-		return
-	}
-	nodes := []*TreeNode{root}
-	for len(nodes) > 0 {
-		l := len(nodes)
-		for l > 0 {
-			currentNode := nodes[0]
-			if currentNode != nil {
-				fmt.Printf("%d,", currentNode.Val)
-				nodes = append(nodes, currentNode.Left, currentNode.Right)
-			}
-			nodes = nodes[1:]
-			l--
-		}
-		fmt.Println()
-	}
-}
+//func Print(root *TreeNode) {
+//	if root == nil {
+//		return
+//	}
+//	nodes := []*TreeNode{root}
+//	for len(nodes) > 0 {
+//		l := len(nodes)
+//		for l > 0 {
+//			currentNode := nodes[0]
+//			if currentNode != nil {
+//				fmt.Printf("%d,", currentNode.Val)
+//				nodes = append(nodes, currentNode.Left, currentNode.Right)
+//			}
+//			nodes = nodes[1:]
+//			l--
+//		}
+//		fmt.Println()
+//	}
+//}

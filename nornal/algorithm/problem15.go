@@ -1,20 +1,37 @@
 package algorithm
 
 func threeSum(nums []int) [][]int {
+	tupleMap := make(map[int]map[int]int)
 	zeroTuple := make([][]int, 0)
-	i := 1
-	for len(nums)-i > 1 {
-		j := i + 1
-		num1 := nums[i-1]
-		num2 := nums[i]
-		for j < len(nums) {
-			if num1+num2+nums[j] == 0 {
-				zeroTuple = append(zeroTuple, []int{num1, num2, nums[j]})
+	for i := 0; i < len(nums); i++ {
+		for j := 0; j < len(nums); j++ {
+			if j == i {
+				continue
 			}
-			j++
+			for k := 0; k < len(nums); k++ {
+				if k == i || k == j {
+					continue
+				}
+				num1 := nums[i]
+				num2 := nums[j]
+				num3 := nums[k]
+
+				if num1+num2+num3==0{
+				}
+			}
 		}
-		i++
 	}
 
 	return zeroTuple
+}
+
+
+func min(a,b,c int)int{
+	if a<b&& a<c{
+		return  a
+	}
+	if b<a&&b<c{
+		return b
+	}
+
 }
