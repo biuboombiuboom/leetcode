@@ -2,17 +2,25 @@ package algorithm
 
 //IsHappy u
 func IsHappy(n int) bool {
-	nums := make(map[int]int)
-	result := 0
-	for n%10 != 0 {
-		i := n / 10
-		n = n / 10
-		result += i * i
-		n = result
-		result = 0
-		if _, ok := nums[n]; ok {
-			return false
-		}
+	if n == 1 {
+		return true
 	}
-	return true
+	nums := make(map[int]int)
+
+	for n != 1 {
+		if _, ok := nums[n]; ok {
+			break
+		}
+		nums[n] = n
+		newN := 0
+		for n >= 10 {
+			i := n % 10
+			newN += i * i
+			n = n / 10
+		}
+		n = newN + n*n
+
+	}
+
+	return false
 }
