@@ -1,6 +1,5 @@
 package problem
 
-
 /*
 输入:
 nums1 = [3, 4, 6, 5]
@@ -9,67 +8,52 @@ k = 5
 输出:
 [9, 8, 6, 5, 3]
 */
-func maxNumber1(nums1 []int, nums2 []int, k int) []int {
-	ans := make([]int, 0)
-	for k > 0 {
-		num, i1, i2 := findNext(nums1, nums2, k)
-		ans = append(ans, num)
-		nums1 = nums1[i1+1:]
-		nums2 = nums2[i2+1:]
-		k--
-
+func maxNumber(nums1 []int, nums2 []int, k int) []int {
+	ans := make([]int, k)
+	for i := 0; i < k; i++ {
+		max1 := findMax(nums1, i)
+		max2 := findMax(nums2, k-i)
+		maxNumber := mergeNums(max1, max2)
+		if less(ans, maxNumber) {
+			ans = maxNumber
+		}
 	}
-
 	return ans
 }
 
-func findNext(nums1 []int, nums2 []int, k int) (int, int, int) {
-	max1, index1 := findMaxWithIndex(nums1)
-	max2, index2 := findMaxWithIndex(nums2)
-	if index1 == -1 {
-		return max2, index1, index2
+func findMax(nums []int, k int) []int {
+	ans:=make([]int,0)
+	for i, v := range nums {
+		for len(ans) > 0 && len(ans)+len(nums)-1-i >= k && v > ans[len(ans)-1] {
+			ans = ans[:len(ans)-1]
+		}
+		if len(ans) < k {
+			ans = append(ans, v)
+		}
 	}
-	if index2 == -1 {
-		return max1, index1, -index2
-	}
-	if max1 > max2 {
-		if len(nums1)+len(nums2)-index1 >= k {
-			return max1, index1, -1
-		} else {
-			return findNext(nums1[:index1], nums2, k-len(nums1)+index1)
-		}
-	} else if max1 < max2 {
-		if len(nums1)+len(nums2)-index2 >= k {
-			return max2, -1, index2
-		} else {
-			return findNext(nums1, nums2[:index2], k-len(nums2)+index2)
-		}
-	} else {
-		if len(nums1)+len(nums2)-index2 >= k && len(nums1)+len(nums2)-index1 >= k {
-			_, i1, _ := findNext(nums1[index1+1:], nums2[index2+1:], k-2)
-			if i1 > -1 {
-				return max1, index1, -1
-			} else {
-				return max2, -1, index2
-			}
-		} else if len(nums1)+len(nums2)-index1 >= k {
-			return max1, index1, -1
-		} else if len(nums1)+len(nums2)-index2 >= k {
-			return max2, -1, index2
-		}
-		return findNext(nums1[:index1], nums2[:index2], k-index2-index1-2)
+	return ans
 
-	}
 }
 
-func findMaxWithIndex(nums []int) (int, int) {
-	max := 0
-	index := -1
-	for i, num := range nums {
-		if num > max {
-			max = num
-			index = i
+func mergeNums(nums1, nums2 []int) []int {
+	ans := make([]int, len(nums1)+len(nums2))
+ 	for i := 0; i < len(ans); i++ {
+		if less(nums1, nums2) {
+			ans[i] = nums2[0]
+			nums2 = nums2[1:]
+		} else {
+			ans[i] = nums1[0]
+			nums1 = nums1[1:]
 		}
 	}
-	return max, index
+	return ans
+}
+
+func less(nums1, nums2 []int) bool {
+	for i := 0; i < len(nums1) && i < len(nums2); i++ {
+		if nums1[i] != nums2[i] {
+			return nums1[i] < nums2[i]
+		}
+	}
+	return len(nums1)<len(nums2)
 }

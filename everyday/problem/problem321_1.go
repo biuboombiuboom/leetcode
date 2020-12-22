@@ -33,7 +33,7 @@ func merge(a, b []int) []int {
 	return merged
 }
 
-func maxNumber(nums1, nums2 []int, k int) (res []int) {
+func maxNumber1(nums1, nums2 []int, k int) (res []int) {
 	start := 0
 	if k > len(nums2) {
 		start = k - len(nums2)
