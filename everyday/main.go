@@ -1,6 +1,9 @@
 package main
 
-import "github.com/biuboombiuboom/leetcode/everyday/problem"
+import (
+	//"github.com/biuboombiuboom/leetcode/everyday/problem"
+	"github.com/biuboombiuboom/leetcode/everyday/problem/p202103"
+)
 
 func main() {
 	//head := buildListNode([]int{1, 2})
@@ -9,7 +12,7 @@ func main() {
 	//l1=addTwoNumbers(l2,l1)
 
 
-	problem.Print()
+	p202103.Print()
 }
 
 //func buildListNode(nums []int) *ListNode {
