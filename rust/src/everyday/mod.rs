@@ -5,3 +5,7 @@ mod s399;
 mod s721;
 mod s1584;
 mod s1489;
+mod s17_21;
+mod s80;
+mod s88;
+mod s781;

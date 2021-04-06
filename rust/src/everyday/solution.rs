@@ -1,4 +1,4 @@
 use crate::everyday::*;
 pub fn run() {
-   s1489::run();
+   s781::run();
 }
