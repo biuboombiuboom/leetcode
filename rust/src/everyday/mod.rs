@@ -9,3 +9,6 @@ mod s17_21;
 mod s80;
 mod s88;
 mod s781;
+mod s1143;
+mod s81;
+mod s153;
