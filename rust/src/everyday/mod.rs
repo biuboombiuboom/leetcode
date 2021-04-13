@@ -12,3 +12,6 @@ mod s781;
 mod s1143;
 mod s81;
 mod s153;
+mod s154;
+mod s179;
+mod s783;
