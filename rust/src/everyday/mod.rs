@@ -16,3 +16,7 @@ mod s154;
 mod s179;
 mod s783;
 mod s208;
+mod s91;
+mod s363;
+mod s386;
+mod s1011;
