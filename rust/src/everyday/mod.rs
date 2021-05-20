@@ -32,3 +32,4 @@ mod s193;
 mod s1442;
 mod s421;
 mod s1738;
+mod s692;

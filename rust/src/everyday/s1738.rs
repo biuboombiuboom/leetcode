@@ -1,9 +1,11 @@
 
+        use std::cmp::Reverse;
+
 struct Solution;
 impl Solution {
     pub fn kth_largest_value(matrix: Vec<Vec<i32>>, k: i32) -> i32 {
-        
         let k =k as usize;
+        let mut heap=std::collections::BinaryHeap::with_capacity(k);
         let mut new_matrix:Vec<Vec<i32>>=Vec::new();
         let m=matrix.len();
         let n=matrix[0].len();
@@ -21,13 +23,20 @@ impl Solution {
                 if i>0&&j>0{
                     new_matrix[i][j]= new_matrix[i][j]^new_matrix[i-1][j-1];
                 }   
-                top_k.push( new_matrix[i][j])          ;  
+                if heap.len()<k{
+                    heap.push(Reverse(new_matrix[i][j]))
+                }else if heap.peek().unwrap().0<new_matrix[i][j]{
+                    heap.pop();
+                    heap.push(Reverse(new_matrix[i][j]));
+                }
             }            
         }
-        top_k.sort();
-        return top_k[m*n-k];       
+        return heap.peek().unwrap().0;       
     }
 }
+
+
+
 
 pub fn run(){
     println!("{}",Solution::kth_largest_value(vec![vec![5,2],vec![1,6]], 2))
