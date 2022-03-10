@@ -1,6 +1,13 @@
-pub fn max(x: usize, y: usize) -> usize{
-    if x>y{
-        return x
+pub fn max(x: usize, y: usize) -> usize {
+    if x > y {
+        return x;
     }
-    return y
+    return y;
+}
+
+pub fn min(x: usize, y: usize) -> usize {
+    if x > y {
+        return y;
+    }
+    return x;
 }
