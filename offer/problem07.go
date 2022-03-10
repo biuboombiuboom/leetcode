@@ -28,11 +28,11 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 		Val: preorder[0],
 	}
 	for i := 0; i < len(preorder) && i < 2; i++ {
-		node := &TreeNode{
-			Val:   preorder[i],
-			Left:  nil,
-			Right: nil,
-		}
+		// node := &TreeNode{
+		// 	Val:   preorder[i],
+		// 	Left:  nil,
+		// 	Right: nil,
+		// }
 
 	}
 	return root

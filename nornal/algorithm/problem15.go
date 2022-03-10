@@ -1,7 +1,6 @@
 package algorithm
 
 func threeSum(nums []int) [][]int {
-	tupleMap := make(map[int]map[int]int)
 	zeroTuple := make([][]int, 0)
 	for i := 0; i < len(nums); i++ {
 		for j := 0; j < len(nums); j++ {
@@ -25,13 +24,3 @@ func threeSum(nums []int) [][]int {
 	return zeroTuple
 }
 
-
-func min(a,b,c int)int{
-	if a<b&& a<c{
-		return  a
-	}
-	if b<a&&b<c{
-		return b
-	}
-
-}
